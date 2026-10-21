@@ -1,4 +1,4 @@
-"""Small command-line interface; run python -m ensegnet --help."""
+"""Command-line entry points for training and evaluation."""
 import argparse
 import json
 from pathlib import Path
@@ -7,9 +7,9 @@ from pathlib import Path
 def main():
     parser = argparse.ArgumentParser(description="2DM-Ensegnet research workflow")
     sub = parser.add_subparsers(dest="command", required=True)
-    train = sub.add_parser("train", help="Train from a frozen JSON configuration; never read the test split")
+    train = sub.add_parser("train", help="Train using the selected protocol; never read the test split")
     train.add_argument("--data", required=True)
-    train.add_argument("--config", required=True)
+    train.add_argument("--protocol", choices=["cvd", "exfoliated", "leger-source"], default="cvd")
     train.add_argument("--output", required=True)
     train.add_argument("--model", choices=["ensemble", "segformer_b1", "student_control", "scse", "han", "leger"], default="ensemble")
     train.add_argument("--device", default="cuda")
@@ -45,22 +45,15 @@ def main():
     transfer.add_argument("--normalized-images", help="Exact archived MATLAB Lab-normalized PNG folder")
     transfer.add_argument("--full-field", action="store_true")
     transfer.add_argument("--device", default="cuda")
-    plot = sub.add_parser("plot", help="Create comparison plots from saved metrics, without running a model")
-    plot.add_argument("--metrics", nargs="+", required=True)
-    plot.add_argument("--labels", nargs="+", required=True)
-    plot.add_argument("--output", required=True)
     args = parser.parse_args()
-    if args.command == "plot":
-        from .figures import plot
-        plot(args.metrics, args.labels, args.output)
-        return
     # Match the source scripts' cuBLAS workspace setting before CUDA starts.
     if args.command == "transfer" or (args.command == "evaluate" and args.domain == "exfoliated"):
         import os
         os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG", ":4096:8")
     from . import engine
     if args.command == "train":
-        config = json.loads(Path(args.config).read_text(encoding="utf-8"))
+        from .protocols import get_protocol
+        config = get_protocol(args.protocol)
         if config["protocol"] in {"exfoliated", "leger-source"}:
             import os
             os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG", ":4096:8")

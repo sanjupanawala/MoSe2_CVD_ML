@@ -20,3 +20,14 @@ outputs/
 *.docx
 *.pdf
 *.log
+records/
+figures/
+configs/
+*.json
+*.csv
+*.svg
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff

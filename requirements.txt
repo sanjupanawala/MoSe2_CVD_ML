@@ -1,5 +1,4 @@
 # Core versions used for the recorded experiments (Python 3.9.24).
-# Install the matching PyTorch/CUDA wheels first; see README.md.
 torch==2.8.0
 torchvision==0.23.0
 numpy==2.0.2
@@ -11,4 +10,3 @@ safetensors==0.6.2
 huggingface-hub==0.36.0
 opencv-python==4.12.0.88
 Pillow==11.3.0
-matplotlib==3.9.4
