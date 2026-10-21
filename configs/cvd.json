@@ -1,0 +1,14 @@
+{
+  "protocol": "cvd",
+  "domain": "cvd",
+  "counts": {"train": 97, "val": 12, "test": 12},
+  "seeds": [20261010, 20261011, 20261012],
+  "epochs": 50,
+  "batch_size": 4,
+  "validation_batch_size": 2,
+  "learning_rate": 0.0001,
+  "amp": true,
+  "augmentation": true,
+  "loss": "cross entropy plus macro soft Dice, equal coefficients",
+  "selection": "maximum pooled validation mIoU; exact ties use earliest epoch"
+}

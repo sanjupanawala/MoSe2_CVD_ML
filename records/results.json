@@ -1,0 +1,343 @@
+{
+  "class_order": [
+    "substrate",
+    "monolayer",
+    "multilayer"
+  ],
+  "cvd": {
+    "2DM-Ensegnet": {
+      "miou": 0.8878894821176518,
+      "iou": [
+        0.9300257467927593,
+        0.910561484344405,
+        0.8230812152157913
+      ],
+      "dice": [
+        0.963744393916236,
+        0.9531873135785079,
+        0.9029561693096226
+      ],
+      "pixel_accuracy": 0.9466549555460612,
+      "coverage_mae_pp": [
+        0.9832064310709635,
+        2.0889600118001304,
+        2.1178563435872397
+      ],
+      "boundary_f1": [
+        0.6616770722602859,
+        0.7777416539105365,
+        0.8072892886989148
+      ],
+      "n_tiles": 12,
+      "aggregation": "one scored output"
+    },
+    "RGB histogram": {
+      "miou": 0.8221619019506708,
+      "iou": [
+        0.8438602019657745,
+        0.8644849044715498,
+        0.758140599414688
+      ],
+      "dice": [
+        0.9153190692723007,
+        0.9273176762099561,
+        0.8624345512151698
+      ],
+      "pixel_accuracy": 0.9136199951171875,
+      "coverage_mae_pp": [
+        3.0152320861816406,
+        4.251702626546224,
+        3.233464558919271
+      ],
+      "boundary_f1": [
+        0.4220785510962819,
+        0.5946600689201594,
+        0.6557799414383884
+      ],
+      "n_tiles": 12,
+      "aggregation": "one scored output"
+    },
+    "Han et al.": {
+      "miou": 0.7765255915558665,
+      "iou": [
+        0.7926533323131119,
+        0.8235561909315477,
+        0.7133672514229401
+      ],
+      "dice": [
+        0.8843062989936846,
+        0.9032339231201284,
+        0.8326912108165473
+      ],
+      "pixel_accuracy": 0.886439535352919,
+      "coverage_mae_pp": [
+        3.744665781656901,
+        4.185994466145833,
+        2.6442315843370228
+      ],
+      "boundary_f1": [
+        0.39366766798636793,
+        0.6010240677415356,
+        0.6230928666921034
+      ],
+      "aggregation": "arithmetic mean of three separately scored fits",
+      "n_tiles": 12
+    },
+    "Leger et al.": {
+      "miou": 0.8601501889310965,
+      "iou": [
+        0.9103332233801318,
+        0.8870032338177237,
+        0.7831141095954344
+      ],
+      "dice": [
+        0.9530302912696357,
+        0.9401117631473319,
+        0.8783528678497691
+      ],
+      "pixel_accuracy": 0.9320238961113825,
+      "coverage_mae_pp": [
+        1.2367354498969183,
+        2.074771457248264,
+        2.2545814514160156
+      ],
+      "boundary_f1": [
+        0.5627092373246033,
+        0.7194342547491313,
+        0.7256586948002428
+      ],
+      "aggregation": "arithmetic mean of three separately scored fits",
+      "n_tiles": 12
+    }
+  },
+  "exfoliated": {
+    "2DM-Ensegnet": {
+      "miou": 0.8011166423678763,
+      "iou": [
+        0.9736892001468435,
+        0.63767158658292,
+        0.7919891403738653
+      ],
+      "dice": [
+        0.9866692284422497,
+        0.7787539233228712,
+        0.8839218079286255
+      ],
+      "pixel_accuracy": 0.9752393934461806,
+      "coverage_mae_pp": [
+        1.026814778645834,
+        0.5285644531250002,
+        0.6389702690972222
+      ],
+      "boundary_f1": [
+        0.706267586738656,
+        0.667108089217487,
+        0.6484466618620368
+      ],
+      "n_tiles": 320,
+      "aggregation": "one scored nine-member ensemble"
+    },
+    "Leger et al.": {
+      "miou": 0.7293545667747091,
+      "iou": [
+        0.965817114443118,
+        0.4777483312623025,
+        0.7444982546187067
+      ],
+      "pixel_accuracy": 0.9666551378038194,
+      "aggregation": "one locally trained cross-entropy reproduction"
+    }
+  },
+  "source_to_cvd": {
+    "miou": 0.20873869686617322,
+    "iou": [
+      0.25657309384171834,
+      0.014707765091980055,
+      0.3549352316648213
+    ],
+    "pixel_accuracy": 0.31070899963378906,
+    "coverage_mae_pp": [
+      65.3485616048177,
+      54.994519551595054,
+      10.431098937988281
+    ],
+    "boundary_f1": [
+      0.1828987963139098,
+      0.2246725366926328,
+      0.14468275191623844
+    ]
+  },
+  "verification": {
+    "2DM-Ensegnet_archived_maps": 0.8878894821176518,
+    "RGB_archived_maps": 0.8221619019506708,
+    "segformer_b1_max_logit_difference": 0.0,
+    "student_control_max_logit_difference": 0.0,
+    "scse_max_logit_difference": 0.0,
+    "han_max_logit_difference": 0.0,
+    "leger_max_logit_difference": 0.0,
+    "fresh_nine_member_cvd_miou": 0.8878864333243874,
+    "cvd_fresh_minus_recorded_miou": -3.048793264404104e-06,
+    "rgb_training_lookup_exact": true,
+    "fresh_source_leger_miou": 0.7293545667747091,
+    "fresh_source_ensemble_miou": 0.8011200355675608,
+    "source_fresh_minus_recorded_miou": 3.3931996845648627e-06,
+    "fresh_source_to_cvd_miou": 0.20873869686617322
+  },
+  "checkpoints": [
+    {
+      "name": "segformer_b1__20261010.pth",
+      "sha256": "9c58174bbe80c70d320184603231f1eca9b67fae358a07f3b2bc5f2ba950a06c",
+      "domain": "cvd"
+    },
+    {
+      "name": "segformer_b1__20261011.pth",
+      "sha256": "de88cae1b5ec15f8e40ea3f51b72fcffd407738ec3bf6c153168d31790a72af2",
+      "domain": "cvd"
+    },
+    {
+      "name": "segformer_b1__20261012.pth",
+      "sha256": "7759e05349fb8db571573035bcbf877696078bb2403c950b3075a23289e95358",
+      "domain": "cvd"
+    },
+    {
+      "name": "student_control__20261010.pth",
+      "sha256": "e6a8d22d8d4742aed59fc8cd28e0dd23f2ae0ed6649ae47311a39fec38df963f",
+      "domain": "cvd"
+    },
+    {
+      "name": "student_control__20261011.pth",
+      "sha256": "be994cfbe6c5f26deaba6a8153fac636ca34868a68b7f389501d6c2861e69f5a",
+      "domain": "cvd"
+    },
+    {
+      "name": "student_control__20261012.pth",
+      "sha256": "db1b32d28ef928bb63dfb7417aa93549c729e5b0ddc0af398dcd0a818bacc7d5",
+      "domain": "cvd"
+    },
+    {
+      "name": "scse__20261010.pth",
+      "sha256": "6202e30a331a233e39b6e5b7c8aca6b3bef5fa70f2872b4a0ae09d6e8a50ca34",
+      "domain": "cvd"
+    },
+    {
+      "name": "scse__20261011.pth",
+      "sha256": "f155e090eb5a07531ab936f44b9870dae93e2b547c850ad72a459439acd9707c",
+      "domain": "cvd"
+    },
+    {
+      "name": "scse__20261012.pth",
+      "sha256": "d7693fbdf1b86e9b3e79a459d932a523318484f805191a1199dcecc2b86c954b",
+      "domain": "cvd"
+    },
+    {
+      "name": "segformer_b1__20261010.pth",
+      "sha256": "86e8137c286a93419355a79c64beab1cb76121691ad638c538ffa793f0c32873",
+      "domain": "exfoliated"
+    },
+    {
+      "name": "segformer_b1__20261011.pth",
+      "sha256": "a7d5e282ab19545ea67fa11ae60568d784609d66adf2ef7668da535efd7579ff",
+      "domain": "exfoliated"
+    },
+    {
+      "name": "segformer_b1__20261012.pth",
+      "sha256": "766a3cf891a3628fdf7cc6e18d1cf032b6a3e6de6352f174952721e57a05aeff",
+      "domain": "exfoliated"
+    },
+    {
+      "name": "student_control__20261010.pth",
+      "sha256": "174ba3d51cd80a5fe895723e00b20dc093cb6eb0b4cb6f71f46fbd19d81c7e82",
+      "domain": "exfoliated"
+    },
+    {
+      "name": "student_control__20261011.pth",
+      "sha256": "169842f1a9157a145f0a6655339932a2e205e60224263c09b34c6f4a39107199",
+      "domain": "exfoliated"
+    },
+    {
+      "name": "student_control__20261012.pth",
+      "sha256": "2a232afecf0ad3f46f3d732c2388b73183a133d5df19cc085b98d0924bb8f928",
+      "domain": "exfoliated"
+    },
+    {
+      "name": "scse__20261010.pth",
+      "sha256": "413bb3f13a01ca7a5a2bd258314f801b4a602f2985ce5e84237416613d57df8c",
+      "domain": "exfoliated"
+    },
+    {
+      "name": "scse__20261011.pth",
+      "sha256": "a811d42db22ae9064b17b156fea2625fe4484659d593b12de72b65ff2e5c16c4",
+      "domain": "exfoliated"
+    },
+    {
+      "name": "scse__20261012.pth",
+      "sha256": "b36886d18881a88f1bc23c2f3fbff2880652b849aa28326447d4d5adfff93272",
+      "domain": "exfoliated"
+    },
+    {
+      "name": "han_target__20261010.pth",
+      "sha256": "a10fb535c3a8900dde7076d0ba9d9aa7ea930d4f28585751e8e8535c5a0e28ea",
+      "domain": "cvd_comparators"
+    },
+    {
+      "name": "han_target__20261010__val_probability.pth",
+      "sha256": "6f952523a689e816a0f3d1b0984229eae407b3b3ef12c16d19b51dc8373d8e60",
+      "domain": "cvd_comparators"
+    },
+    {
+      "name": "han_target__20261011.pth",
+      "sha256": "9717fe14587790687aef9783d260ff343febed0675c9a4b33f2b5ebab4401ec2",
+      "domain": "cvd_comparators"
+    },
+    {
+      "name": "han_target__20261011__val_probability.pth",
+      "sha256": "9ee4d8233212b0ad63ce1e14715845b033a0eb5545c410dd25cf6af1dea07754",
+      "domain": "cvd_comparators"
+    },
+    {
+      "name": "han_target__20261012.pth",
+      "sha256": "56491a6b8d385bfe50e429d7af5ed04ddbf7b511b843a1baea0fd69f2f055a1c",
+      "domain": "cvd_comparators"
+    },
+    {
+      "name": "han_target__20261012__val_probability.pth",
+      "sha256": "e427516dda44ef9b0ca07d3f11a6ce8a253bd3d95bee45d9d5c9bbc1301ec0b9",
+      "domain": "cvd_comparators"
+    },
+    {
+      "name": "leger_matched__20261010.pth",
+      "sha256": "a1d7f46cdb9d635f409e3f214abb319784ccdac8299ee7548a14a1c2bff5cd01",
+      "domain": "cvd_comparators"
+    },
+    {
+      "name": "leger_matched__20261010__val_probability.pth",
+      "sha256": "165e6a2645f5ec9fd3197b616e33d7908968239b3aad9cef34d559c269779639",
+      "domain": "cvd_comparators"
+    },
+    {
+      "name": "leger_matched__20261011.pth",
+      "sha256": "82489e982a179786eb06ec77f5d0bbb39d1d868b4d5398fd4068a313af3fe8f5",
+      "domain": "cvd_comparators"
+    },
+    {
+      "name": "leger_matched__20261011__val_probability.pth",
+      "sha256": "f040dac4565fa4f4412d7e3e5d300f1e389b839f45a3bd1ec55adbed725a09bc",
+      "domain": "cvd_comparators"
+    },
+    {
+      "name": "leger_matched__20261012.pth",
+      "sha256": "da09559565843826cdf5c76f07689a344e279903ecd630d0fcc342d7d4b5499a",
+      "domain": "cvd_comparators"
+    },
+    {
+      "name": "leger_matched__20261012__val_probability.pth",
+      "sha256": "e9eb855380b8265290436e09c06df55964beef1db60dc945866edec8a5360324",
+      "domain": "cvd_comparators"
+    },
+    {
+      "name": "cross_entropy_best.pth",
+      "sha256": "f55933bbe420f166f1b0c91712471f849c16901e0c1ccfe6193a1ba07afe7614",
+      "domain": "source_leger"
+    }
+  ]
+}

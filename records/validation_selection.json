@@ -1,0 +1,321 @@
+{
+  "status": "frozen_from_validation_before_new_test_scoring",
+  "criterion": "Top three non-distillation architecture IDs ranked by mean validation mIoU over three fits; nine equal-weight members.",
+  "ensemble_architectures": [
+    "segformer_b1",
+    "student_control",
+    "scse"
+  ],
+  "architecture_rows": [
+    {
+      "id": "corrected_ce",
+      "validation_mean_miou": 0.8306010496716844,
+      "validation_seed_miou": [
+        0.8258967466392467,
+        0.8346442680458953,
+        0.8312621343299111
+      ],
+      "total_parameters": 32521395
+    },
+    {
+      "id": "region",
+      "validation_mean_miou": 0.8322520802668115,
+      "validation_seed_miou": [
+        0.8250535344844897,
+        0.8383634082613234,
+        0.8333392980546215
+      ],
+      "total_parameters": 32521395
+    },
+    {
+      "id": "imagenet_normalization",
+      "validation_mean_miou": 0.8327609026709953,
+      "validation_seed_miou": [
+        0.8241624787596852,
+        0.8419827127349677,
+        0.8321375165183333
+      ],
+      "total_parameters": 32521395
+    },
+    {
+      "id": "scse",
+      "validation_mean_miou": 0.8389595308226849,
+      "validation_seed_miou": [
+        0.843195168775412,
+        0.834336341806414,
+        0.8393470818862286
+      ],
+      "total_parameters": 33816366
+    },
+    {
+      "id": "cbam",
+      "validation_mean_miou": 0.8332990362067559,
+      "validation_seed_miou": [
+        0.8298697771986868,
+        0.8334446704699872,
+        0.836582660951594
+      ],
+      "total_parameters": 32533558
+    },
+    {
+      "id": "attention_gates",
+      "validation_mean_miou": 0.8322244987266157,
+      "validation_seed_miou": [
+        0.8263725875811978,
+        0.8398652832572805,
+        0.830435625341369
+      ],
+      "total_parameters": 33372423
+    },
+    {
+      "id": "boundary",
+      "validation_mean_miou": 0.8330429595573787,
+      "validation_seed_miou": [
+        0.8362096525864036,
+        0.8349002956865489,
+        0.8280189303991837
+      ],
+      "total_parameters": 32523749
+    },
+    {
+      "id": "scse_boundary",
+      "validation_mean_miou": 0.8388775616222949,
+      "validation_seed_miou": [
+        0.8383042175691614,
+        0.8389303125983313,
+        0.8393981546993916
+      ],
+      "total_parameters": 33818720
+    },
+    {
+      "id": "surface_loss",
+      "validation_mean_miou": 0.8308368742630786,
+      "validation_seed_miou": [
+        0.82735827224686,
+        0.8388924766694281,
+        0.8262598738729479
+      ],
+      "total_parameters": 32521395
+    },
+    {
+      "id": "coverage_loss",
+      "validation_mean_miou": 0.8302460410280811,
+      "validation_seed_miou": [
+        0.8215822439230981,
+        0.8393754286153593,
+        0.8297804505457856
+      ],
+      "total_parameters": 32521395
+    },
+    {
+      "id": "unetplusplus",
+      "validation_mean_miou": 0.8308533288557061,
+      "validation_seed_miou": [
+        0.8327581857898188,
+        0.8302196472202985,
+        0.8295821535570008
+      ],
+      "total_parameters": 48986035
+    },
+    {
+      "id": "deeplabv3plus",
+      "validation_mean_miou": 0.8385381215612933,
+      "validation_seed_miou": [
+        0.8360493749446368,
+        0.8400776585563602,
+        0.8394873311828827
+      ],
+      "total_parameters": 26678099
+    },
+    {
+      "id": "segformer_b0",
+      "validation_mean_miou": 0.835897878805493,
+      "validation_seed_miou": [
+        0.8408912224628812,
+        0.8329351323423506,
+        0.8338672816112475
+      ],
+      "total_parameters": 3714915
+    },
+    {
+      "id": "segformer_b1",
+      "validation_mean_miou": 0.8393064046305815,
+      "validation_seed_miou": [
+        0.8378560906091592,
+        0.8441240264363976,
+        0.8359390968461873
+      ],
+      "total_parameters": 13678019
+    },
+    {
+      "id": "hrnet",
+      "validation_mean_miou": 0.8374543226013386,
+      "validation_seed_miou": [
+        0.8364877757646423,
+        0.8404936614789761,
+        0.8353815305603973
+      ],
+      "total_parameters": 11030671
+    },
+    {
+      "id": "early_features",
+      "validation_mean_miou": 0.8305133025759303,
+      "validation_seed_miou": [
+        0.8250243048025603,
+        0.8380380970556598,
+        0.8284775058695707
+      ],
+      "total_parameters": 32521425
+    },
+    {
+      "id": "contrast_branch",
+      "validation_mean_miou": 0.8346949879128956,
+      "validation_seed_miou": [
+        0.828285361105497,
+        0.8414061285426249,
+        0.8343934740905647
+      ],
+      "total_parameters": 32525123
+    },
+    {
+      "id": "contrast_gated",
+      "validation_mean_miou": 0.8365765854337578,
+      "validation_seed_miou": [
+        0.8249117838692422,
+        0.8463387781305771,
+        0.838479194301454
+      ],
+      "total_parameters": 32525651
+    },
+    {
+      "id": "native_crops",
+      "validation_mean_miou": 0.8246723752922986,
+      "validation_seed_miou": [
+        0.8238786341281289,
+        0.8412179939757707,
+        0.8089204977729962
+      ],
+      "total_parameters": 32521395
+    },
+    {
+      "id": "context_detail",
+      "validation_mean_miou": 0.822350217127532,
+      "validation_seed_miou": [
+        0.8181117491339904,
+        0.8247773887311163,
+        0.8241615135174891
+      ],
+      "total_parameters": 32521923
+    },
+    {
+      "id": "pointrend",
+      "validation_mean_miou": 0.8259429050017374,
+      "validation_seed_miou": [
+        0.8216473260676859,
+        0.8297044581423048,
+        0.8264769307952214
+      ],
+      "total_parameters": 32527030
+    },
+    {
+      "id": "hierarchical",
+      "validation_mean_miou": 0.83152205243473,
+      "validation_seed_miou": [
+        0.8337179254253595,
+        0.8264267398567762,
+        0.8344214920220542
+      ],
+      "total_parameters": 32521250
+    },
+    {
+      "id": "consistency_control",
+      "validation_mean_miou": 0.8321443584780059,
+      "validation_seed_miou": [
+        0.8233189170270256,
+        0.8318905846916987,
+        0.8412235737152933
+      ],
+      "total_parameters": 32521395
+    },
+    {
+      "id": "teacher_consistency",
+      "validation_mean_miou": 0.8322636356973457,
+      "validation_seed_miou": [
+        0.8308797803957108,
+        0.8372521548718557,
+        0.828658971824471
+      ],
+      "total_parameters": 32521395
+    },
+    {
+      "id": "swa_schedule_control",
+      "validation_mean_miou": 0.8334559296115436,
+      "validation_seed_miou": [
+        0.8333422510841318,
+        0.8392140089655633,
+        0.8278115287849355
+      ],
+      "total_parameters": 32521395
+    },
+    {
+      "id": "swa",
+      "validation_mean_miou": 0.8157626748782132,
+      "validation_seed_miou": [
+        0.8171583046114617,
+        0.8191811739688838,
+        0.810948546054294
+      ],
+      "total_parameters": 32521395
+    },
+    {
+      "id": "student_control",
+      "validation_mean_miou": 0.8389916663404847,
+      "validation_seed_miou": [
+        0.8418751754930566,
+        0.8379407349547147,
+        0.8371590885736829
+      ],
+      "total_parameters": 14328499
+    },
+    {
+      "id": "ref17_target",
+      "validation_mean_miou": 0.8155898548678442,
+      "validation_seed_miou": [
+        0.8137001104444987,
+        0.8141829429621629,
+        0.8188865111968712
+      ],
+      "total_parameters": 24430387
+    },
+    {
+      "id": "dinov2_adapter",
+      "validation_mean_miou": 0.8061996661815667,
+      "validation_seed_miou": [
+        0.8083868986612087,
+        0.8048326310233916,
+        0.8053794688600996
+      ],
+      "total_parameters": 22792563
+    },
+    {
+      "id": "microsam_adapter",
+      "validation_mean_miou": 0.7777564737819982,
+      "validation_seed_miou": [
+        0.7695937562330268,
+        0.7886279697899,
+        0.7750476953230679
+      ],
+      "total_parameters": 90259443
+    },
+    {
+      "id": "2dtlk_native_attempt",
+      "validation_mean_miou": 0.8196309635459857,
+      "validation_seed_miou": [
+        0.8136611883164238,
+        0.8192313702766928,
+        0.8260003320448407
+      ],
+      "total_parameters": 5619299
+    }
+  ]
+}
