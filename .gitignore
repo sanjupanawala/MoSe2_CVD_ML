@@ -8,7 +8,8 @@ venv/
 .idea/
 .vscode/
 data/
-weights/
+weights/*
+!weights/cvd/
 runs/
 outputs/
 *.pth
@@ -31,3 +32,4 @@ configs/
 *.jpeg
 *.tif
 *.tiff
+!weights/cvd/*.pth
